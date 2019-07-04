@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+{% if messages%}
+    {% for message in messages%}
+        {{message}}
+    {% endfor%}
+{% endif %}
+<form method="post" action="">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit">login</button>
+
+</form>
+<br><br>
+
+
+<small> <a href="{% url 'profile' %}">sign Up</a> </small>
+</body>
+</html>

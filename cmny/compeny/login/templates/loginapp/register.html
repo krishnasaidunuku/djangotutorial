@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<body>
+<div>
+<form action="/register" method="POST">
+{% csrf_token %}
+{{login}}
+<button type="submit">register</button>
+</form>
+</div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="{% url 'login' %}">login</a>
+
+
+{% if messages%}
+    {% for message in messages%}
+        {{message}}
+    {% endfor%}
+{% endif %}
+<form method="post" action="">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit">sign Up</button>
+
+</form>
+<br><br>
+
+
+<small>Allready Have a Account? <a href="{% url 'login' %}">login</a> </small>
+</body>
+</html>
